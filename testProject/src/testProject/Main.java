@@ -1,5 +1,6 @@
 package testProject;
 
+import java.text.NumberFormat;
 import java.util.Scanner;
 
 public class Main {
@@ -30,7 +31,8 @@ public class Main {
 		int n = period * 12;
 		
 		double MortgagePayment = CalculateMortgagePayment(p,r,n);
-		System.out.println("Mortgage: $"+ MortgagePayment);
+		String MortgageFormatted = NumberFormat.getCurrencyInstance().format(MortgagePayment);
+		System.out.println("Mortgage: "+ MortgageFormatted);
  
 	}
 
